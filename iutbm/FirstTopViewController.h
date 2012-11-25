@@ -11,6 +11,7 @@
 #import "ECSlidingViewController.h"
 #import "MenuViewController.h"
 
+@class MGScrollView;
 
 @interface FirstTopViewController : UIViewController <UITabBarDelegate>
 {
@@ -21,10 +22,9 @@
 @property (nonatomic, strong) NSArray *menuItemsLabel;
 
 @property (strong, nonatomic) IBOutlet UIImageView *anImageView;
-@property (strong, nonatomic) IBOutlet UISegmentedControl *aSegmentControl;
 @property (strong, nonatomic) IBOutlet UILabel *label;
+@property (strong, nonatomic) IBOutlet UILabel *labelLetter;
 
-- (IBAction)didChangeSegmentControl:(UISegmentedControl*)sender;
 
 - (IBAction)revealMenu:(id)sender;
 - (void)activateTab:(int)index;

@@ -16,7 +16,6 @@
 @synthesize menuItemsLabel;
 
 @synthesize anImageView;
-@synthesize aSegmentControl;
 @synthesize label;
 
 - (void)setupData {
@@ -53,7 +52,6 @@
 - (void)viewDidLoad {
     [self setupUI];
     [self setupData];
-    [self didChangeSegmentControl:aSegmentControl];
     [super viewDidLoad];
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"BG-pattern2x.png"]]];
    
@@ -88,46 +86,6 @@
     return cell;
 }
 
-- (IBAction)didChangeSegmentControl:(UISegmentedControl*)sender {
-    [anImageView setImage:[UIImage imageNamed:[imagesArray objectAtIndex:[sender selectedSegmentIndex]]]];
-    [label setText:[labelArray objectAtIndex:[sender selectedSegmentIndex]]];
-
-
-    UIImage *segmentSelected =
-    [[UIImage imageNamed:@"segcontrol_sel.png"]
-     resizableImageWithCapInsets:UIEdgeInsetsMake(0, 15, 0, 15)];
-    UIImage *segmentUnselected =
-    [[UIImage imageNamed:@"segcontrol_uns.png"]
-     resizableImageWithCapInsets:UIEdgeInsetsMake(0, 15, 0, 15)];
-    UIImage *segmentSelectedUnselected =
-    [UIImage imageNamed:@"segcontrol_sel-uns.png"];
-    UIImage *segUnselectedSelected =
-    [UIImage imageNamed:@"segcontrol_uns-sel.png"];
-    UIImage *segmentUnselectedUnselected =
-    [UIImage imageNamed:@"segcontrol_uns-uns.png"];
-    
-    
-    [[UISegmentedControl appearance] setBackgroundImage:segmentUnselected
-                                               forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
-    
-    [[UISegmentedControl appearance] setBackgroundImage:segmentSelected
-                                               forState:UIControlStateSelected barMetrics:UIBarMetricsDefault];
-    
-    [[UISegmentedControl appearance] setDividerImage:segmentUnselectedUnselected
-                                 forLeftSegmentState:UIControlStateNormal
-                                   rightSegmentState:UIControlStateNormal
-                                          barMetrics:UIBarMetricsDefault];
-    
-    [[UISegmentedControl appearance] setDividerImage:segmentSelectedUnselected
-                                 forLeftSegmentState:UIControlStateSelected
-                                   rightSegmentState:UIControlStateNormal
-                                          barMetrics:UIBarMetricsDefault];
-    
-    [[UISegmentedControl appearance] setDividerImage:segUnselectedSelected
-                                 forLeftSegmentState:UIControlStateNormal
-                                   rightSegmentState:UIControlStateSelected
-                                          barMetrics:UIBarMetricsDefault];
-}
 -(void)setupUI{
     
     [anImageView.layer setBorderWidth:5.0f];
@@ -149,6 +107,22 @@
     
     
 }
+
+- (void)willAnimateRotationToInterfaceOrientation:
+(UIInterfaceOrientation)toInterfaceOrientation
+                                         duration:(NSTimeInterval)duration
+{
+    if (toInterfaceOrientation == UIInterfaceOrientationLandscapeLeft ||
+        toInterfaceOrientation == UIInterfaceOrientationLandscapeRight)
+    {
+        
+    }
+    else
+    {
+        
+    }
+}
+
 
 
 @end

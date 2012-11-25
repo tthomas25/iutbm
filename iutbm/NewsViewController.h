@@ -10,9 +10,10 @@
 #import <QuartzCore/QuartzCore.h>
 #import "ECSlidingViewController.h"
 #import "MenuViewController.h"
-
+#import "MGScrollView.h"
 
 @interface News : UIViewController 
 
+@property (nonatomic, weak) IBOutlet MGScrollView *scroller;
 
 @end
