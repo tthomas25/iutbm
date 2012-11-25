@@ -24,7 +24,7 @@
 #define IPAD_LANDSCAPE_GRID    (CGSize){390, 0}
 #define IPAD_TABLES_GRID       (CGSize){624, 0}
 
-#define HEADER_FONT            [UIFont fontWithName:@"HelveticaNeue" size:18]
+
 
 @implementation GalerieViewController {
     MGBox *photosGrid;
@@ -64,6 +64,7 @@
     // add a blank "add photo" box
     [photosGrid.boxes addObject:self.photoAddBox];
     
+    [self embedYouTube:@"http://www.youtube.com/watch?v=l3Iwh5hqbyE" frame:CGRectMake(20, 20, 100, 100)];
     
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"BG-pattern2x.png"]]];
 }
@@ -219,6 +220,26 @@
     return photosGrid.boxes.count == TOTAL_IMAGES && ![self photoBoxWithTag:-1];
 }
 
+- (void)embedYouTube:(NSString *)urlString frame:(CGRect)frame {
+    NSString *embedHTML = @"\
+    <html><head>\
+    <style type=\"text/css\">\
+    body {\
+    background-color: transparent;\
+    color: white;\
+    }\
+    </style>\
+    </head><body style=\"margin:0\">\
+    <embed id=\"yt\" src=\"%@\" type=\"application/x-shockwave-flash\" \
+    width=\"%0.0f\" height=\"%0.0f\"></embed>\
+    </body></html>";
+    NSString *html = [NSString stringWithFormat:embedHTML, urlString, frame.size.width, frame.size.height];
+    UIWebView *videoView = [[UIWebView alloc] initWithFrame:frame];
+    [videoView loadHTMLString:html baseURL:nil];
+    [self.view addSubview:videoView];
+    
+}
+
 - (IBAction)revealMenu:(id)sender
 {
     [self.slidingViewController anchorTopViewTo:ECRight];
@@ -235,6 +256,21 @@
     self.slidingViewController.anchorLeftRevealAmount   = 0;
     
     [self.view addGestureRecognizer:self.slidingViewController.panGesture];
+}
+
+- (IBAction)segmentSwitch:(id)sender {
+    UISegmentedControl *segmentedControl = (UISegmentedControl *) sender;
+    NSInteger selectedSegment = segmentedControl.selectedSegmentIndex;
+    
+    if (selectedSegment == 0) {
+        
+        [photosGrid setHidden:NO];
+    }
+    else{
+        
+        //[firstView setHidden:YES];
+        [photosGrid setHidden:YES];
+    }
 }
 
 

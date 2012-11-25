@@ -15,12 +15,14 @@
 
 @interface GalerieViewController : UIViewController
 
-
 @property (nonatomic, weak) IBOutlet MGScrollView *scroller;
+@property (nonatomic, weak) IBOutlet UISegmentedControl *sender;
 
 - (PhotoBox *)photoAddBox;
 - (BOOL)allPhotosLoaded;
 - (IBAction)revealMenu:(id)sender;
+- (IBAction)segmentSwitch:(id)sender;
+- (void)embedYouTube:(NSString *)urlString frame:(CGRect)frame;
 
 @end
 

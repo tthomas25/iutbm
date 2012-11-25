@@ -156,12 +156,24 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g8U-jL-TwE" customClass="MGScrollView"/>
                             <navigationBar contentMode="scaleToFill" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="d9z-xX-bYt">
                                 <items>
-                                    <navigationItem title="Présentation" id="W0K-Wp-Hnb">
+                                    <navigationItem id="W0K-Wp-Hnb">
+                                        <nil key="title"/>
                                         <barButtonItem key="leftBarButtonItem" title="Menu" id="ynZ-iR-cJJ">
                                             <connections>
                                                 <action selector="revealMenu:" destination="oQI-kF-KyT" id="dwa-ad-vZV"/>
                                             </connections>
                                         </barButtonItem>
+                                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="YLS-at-fYy">
+                                            <rect key="frame" x="82" y="6" width="156" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <segments>
+                                                <segment title="Photos"/>
+                                                <segment title="Vidéos"/>
+                                            </segments>
+                                            <connections>
+                                                <action selector="segmentSwitch:" destination="oQI-kF-KyT" eventType="valueChanged" id="DFL-J0-XfJ"/>
+                                            </connections>
+                                        </segmentedControl>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -180,6 +192,7 @@
                     <tabBarItem key="tabBarItem" title="Général" image="12-eye.png" id="Dx5-T8-BXh"/>
                     <connections>
                         <outlet property="scroller" destination="g8U-jL-TwE" id="iZD-H2-2wh"/>
+                        <outlet property="sender" destination="YLS-at-fYy" id="Nqe-sy-679"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Itf-PV-Ye7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -591,7 +604,9 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GalerieViewController.h"/>
             <relationships>
                 <relationship kind="action" name="revealMenu:"/>
+                <relationship kind="action" name="segmentSwitch:"/>
                 <relationship kind="outlet" name="scroller" candidateClass="MGScrollView"/>
+                <relationship kind="outlet" name="sender" candidateClass="UISegmentedControl"/>
             </relationships>
         </class>
         <class className="InitialSlidingViewController" superclassName="ECSlidingViewController">
