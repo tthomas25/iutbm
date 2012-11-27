@@ -64,7 +64,6 @@
     // add a blank "add photo" box
     [photosGrid.boxes addObject:self.photoAddBox];
     
-    [self embedYouTube:@"http://www.youtube.com/watch?v=l3Iwh5hqbyE" frame:CGRectMake(20, 20, 100, 100)];
     
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"BG-pattern2x.png"]]];
 }
@@ -268,7 +267,7 @@
     }
     else{
         
-        //[firstView setHidden:YES];
+        
         [photosGrid setHidden:YES];
     }
 }

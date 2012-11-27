@@ -12,5 +12,13 @@
 
 
 @interface ThirdTopViewController : UIViewController
+{
+    NSArray *imagesArray;
+    NSArray *labelArray;
+}
+
+@property (nonatomic, strong) NSArray *DUTItems;
+@property (nonatomic, strong) NSArray *LicenceItems;
+
 - (IBAction)revealMenu:(id)sender;
 @end
