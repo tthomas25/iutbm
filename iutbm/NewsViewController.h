@@ -12,6 +12,8 @@
 #import "MenuViewController.h"
 #import "MGScrollView.h"
 
+@class MGScrollView;
+
 @interface News : UIViewController 
 
 @property (nonatomic, weak) IBOutlet MGScrollView *scroller;

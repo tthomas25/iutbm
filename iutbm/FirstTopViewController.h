@@ -10,6 +10,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import "ECSlidingViewController.h"
 #import "MenuViewController.h"
+#import "MGScrollView.h"
 
 @class MGScrollView;
 
@@ -24,7 +25,7 @@
 @property (strong, nonatomic) IBOutlet UIImageView *anImageView;
 @property (strong, nonatomic) IBOutlet UILabel *label;
 @property (strong, nonatomic) IBOutlet UILabel *labelLetter;
-
+@property (nonatomic, weak) IBOutlet MGScrollView *scroller;
 
 - (IBAction)revealMenu:(id)sender;
 - (void)activateTab:(int)index;

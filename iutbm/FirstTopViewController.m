@@ -7,10 +7,31 @@
 //
 
 #import "FirstTopViewController.h"
+#import "MGScrollView.h"
+#import "MGTableBoxStyled.h"
+#import "MGLineStyled.h"
 
 
+#define ROW_SIZE               (CGSize){304, 44}
+#define ROW_SIZE_LANDSCAPE     (CGSize){480,44}
 
-@implementation FirstTopViewController
+
+#define IPHONE_PORTRAIT_GRID   (CGSize){312, 0}
+#define IPHONE_LANDSCAPE_GRID  (CGSize){160, 0}
+#define IPHONE_TABLES_GRID     (CGSize){320, 0}
+
+
+#define IPAD_PORTRAIT_GRID     (CGSize){136, 0}
+#define IPAD_LANDSCAPE_GRID    (CGSize){390, 0}
+#define IPAD_TABLES_GRID       (CGSize){624, 0}
+
+#define HEADER_FONT            [UIFont fontWithName:@"HelveticaNeue" size:14]
+
+@implementation FirstTopViewController{
+    MGBox *tablesGrid, *table1, *table2;
+    UIImage *arrow;
+    BOOL phone;
+}
 
 @synthesize menuItems;
 @synthesize menuItemsLabel;
@@ -19,8 +40,8 @@
 @synthesize label;
 
 - (void)setupData {
-    imagesArray = [NSArray arrayWithObjects:@"slideshows_bouge.gif",@"slideshow_facebook.gif",@"slideshow_formations.gif",@"slideshow_adiut.gif", nil];
-    labelArray = [NSArray arrayWithObjects:@"L'actualité des formations et de la vie étudiante", @"Rejoignez-nous!",@"Brochure des formations 2012-2013",@"115 IUT en France", nil];
+    imagesArray = [NSArray arrayWithObjects:@"slideshows_bouge.png",@"slideshow_facebook.png",@"slideshow_formations.png",@"slideshow_adiut.png", nil];
+    labelArray = [NSArray arrayWithObjects:@"L'actualité des formations et de la vie étudiante", @"Rejoignez-nous! Dites-nous 'J'aime' sur www.facebook.com/mont.bel.iut et vous saurez tout sur la vie à l'IUT Belfort-Montbéliard !",@"Brochure des formations 2012-2013",@"115 IUT en France", nil];
    
 }
 
@@ -50,11 +71,49 @@
 
 
 - (void)viewDidLoad {
+    
     [self setupUI];
     [self setupData];
     [super viewDidLoad];
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"BG-pattern2x.png"]]];
-   
+    
+    // iPhone or iPad?
+    UIDevice *device = UIDevice.currentDevice;
+    phone = device.userInterfaceIdiom == UIUserInterfaceIdiomPhone;
+    
+    // i'll be using this a lot
+    arrow = [UIImage imageNamed:@"arrow"];
+    
+    // setup the main scroller (using a grid layout)
+    self.scroller.contentLayoutMode = MGLayoutGridStyle;
+    self.scroller.bottomPadding = 8;
+    
+    
+    // the tables grid
+    CGSize tablesGridSize = phone ? IPHONE_TABLES_GRID : IPAD_TABLES_GRID;
+    tablesGrid = [MGBox boxWithSize:tablesGridSize];
+    tablesGrid.contentLayoutMode = MGLayoutGridStyle;
+    [self.scroller.boxes addObject:tablesGrid];
+    
+    // the features table
+    table1 = MGBox.box;
+    [tablesGrid.boxes addObject:table1];
+    table1.sizingMode = MGResizingShrinkWrap;
+    
+    // the subsections table
+    table2 = MGBox.box;
+    [tablesGrid.boxes addObject:table2];
+    table2.sizingMode = MGResizingShrinkWrap;
+    
+    [self loadIntroSection];
+    [tablesGrid layout];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self willAnimateRotationToInterfaceOrientation:self.interfaceOrientation
+                                           duration:1];
+    [self didRotateFromInterfaceOrientation:UIInterfaceOrientationPortrait];
 }
 
 - (void)awakeFromNib
@@ -105,24 +164,57 @@
     anImageView.animationRepeatCount = 0;
     [anImageView startAnimating];*/
     
-    
 }
 
-- (void)willAnimateRotationToInterfaceOrientation:
-(UIInterfaceOrientation)toInterfaceOrientation
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)o {
+    return YES;
+}
+
+- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
                                          duration:(NSTimeInterval)duration
 {
-    if (toInterfaceOrientation == UIInterfaceOrientationLandscapeLeft ||
-        toInterfaceOrientation == UIInterfaceOrientationLandscapeRight)
+    [super willAnimateRotationToInterfaceOrientation:toInterfaceOrientation duration:duration];
+    
+   
+    if (toInterfaceOrientation == UIInterfaceOrientationLandscapeLeft
+        ||  toInterfaceOrientation == UIInterfaceOrientationLandscapeRight)
     {
+        
         
     }
     else
     {
         
-    }
+            }
+    
+    [self.scroller layoutWithSpeed:duration completion:nil];
 }
+    
 
+- (void)loadIntroSection{
+    NSUInteger i=0;
+    for(i=0;i<imagesArray.count;i++)
+    {
+        
+        // intro section
+        MGTableBoxStyled *menu = MGTableBoxStyled.box;
+        [table1.boxes addObject:menu];
+    
+        // header line
+        MGLineStyled
+        *header = [MGLineStyled lineWithLeft:[labelArray objectAtIndex:i] right:nil size:ROW_SIZE];
+        header.font = HEADER_FONT;
+        [menu.topLines addObject:header];
+    
+        // layout menu line
+        MGLine *line1 = [MGLine lineWithLeft:[UIImage imageNamed:[imagesArray objectAtIndex:i]] multilineRight:@"" width:304 minHeight:40];
+        [menu.topLines addObject:line1];
+        
+        
+    }
+    
+}
 
 
 @end

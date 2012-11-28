@@ -7,13 +7,17 @@
 //
 
 #import "AppDelegate.h"
+#import "RootViewController.h"
 
 @implementation AppDelegate
 
+@synthesize window;
+@synthesize navigationController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    //UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
+    [window addSubview:[navigationController view]];
+    [window makeKeyAndVisible];
     return YES;
 }
 							
@@ -43,5 +47,6 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
 
 @end

@@ -8,53 +8,129 @@
 
 #import "NewsViewController.h"
 #import "MGScrollView.h"
-#import "MGBox.h"
 #import "MGTableBoxStyled.h"
 #import "MGLineStyled.h"
 
+#define TOTAL_IMAGES           28
+#define IPHONE_INITIAL_IMAGES  3
+#define IPAD_INITIAL_IMAGES    11
 
-@implementation News
+#define ROW_SIZE               (CGSize){304, 44}
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
+
+#define IPHONE_PORTRAIT_GRID   (CGSize){312, 0}
+#define IPHONE_LANDSCAPE_GRID  (CGSize){160, 0}
+#define IPHONE_TABLES_GRID     (CGSize){320, 0}
+
+
+#define IPAD_PORTRAIT_GRID     (CGSize){136, 0}
+#define IPAD_LANDSCAPE_GRID    (CGSize){390, 0}
+#define IPAD_TABLES_GRID       (CGSize){624, 0}
+
+#define HEADER_FONT            [UIFont fontWithName:@"HelveticaNeue" size:18]
+
+@implementation News {
+    MGBox *tablesGrid, *table1, *table2;
+    UIImage *arrow;
+    BOOL phone;
 }
 
--(void) setupBox{
+- (void)viewDidLoad {
+    
+    [super viewDidLoad];
+    
+    // iPhone or iPad?
+    UIDevice *device = UIDevice.currentDevice;
+    phone = device.userInterfaceIdiom == UIUserInterfaceIdiomPhone;
+    
+    // i'll be using this a lot
+    arrow = [UIImage imageNamed:@"arrow"];
+    
+    // setup the main scroller (using a grid layout)
+    self.scroller.contentLayoutMode = MGLayoutGridStyle;
+    self.scroller.bottomPadding = 8;
+    
+    
+    // the tables grid
+    CGSize tablesGridSize = phone ? IPHONE_TABLES_GRID : IPAD_TABLES_GRID;
+    tablesGrid = [MGBox boxWithSize:tablesGridSize];
+    tablesGrid.contentLayoutMode = MGLayoutGridStyle;
+    [self.scroller.boxes addObject:tablesGrid];
+    
+    // the features table
+    table1 = MGBox.box;
+    [tablesGrid.boxes addObject:table1];
+    table1.sizingMode = MGResizingShrinkWrap;
+    
+    // the subsections table
+    table2 = MGBox.box;
+    [tablesGrid.boxes addObject:table2];
+    table2.sizingMode = MGResizingShrinkWrap;
     
     
     
-    MGScrollView *scroller = [MGScrollView scrollerWithSize:self.view.bounds.size];
-    [self.view addSubview:scroller];
+    [self loadIntroSection];
     
-    MGTableBoxStyled *section = MGTableBoxStyled.box;
-    [scroller.boxes addObject:section];
+    [tablesGrid layout];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self willAnimateRotationToInterfaceOrientation:self.interfaceOrientation
+                                           duration:1];
+    [self didRotateFromInterfaceOrientation:UIInterfaceOrientationPortrait];
+}
+
+#pragma mark - Rotation and resizing
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)o {
+    return YES;
+}
+
+- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)orient
+                                         duration:(NSTimeInterval)duration {
     
+    BOOL portrait = UIInterfaceOrientationIsPortrait(orient);
     
-    // a default row size
-    CGSize rowSize = (CGSize){304, 40};
+    // relayout the sections
+    [self.scroller layoutWithSpeed:duration completion:nil];
+}
+
+#pragma mark - Main menu sections
+
+- (void)loadIntroSection {
     
-    // a header row
-    MGLineStyled *header = [MGLineStyled lineWithLeft:@"My First Table" right:nil size:rowSize];
-    header.leftPadding = header.rightPadding = 16;
-    [section.topLines addObject:header];
+    // intro section
+    MGTableBoxStyled *menu = MGTableBoxStyled.box;
+    [table1.boxes addObject:menu];
     
-    // a string on the left and a horse on the right
-    MGLineStyled *row1 = [MGLineStyled lineWithLeft:@"Left text"
-                                              right:[UIImage imageNamed:@"slideshow_facebook.gif"] size:rowSize];
-    [section.topLines addObject:row1];
+    // header line
+    MGLineStyled
+    *header = [MGLineStyled lineWithLeft:@"MGBox Demo" right:nil size:ROW_SIZE];
+    header.font = HEADER_FONT;
+    [menu.topLines addObject:header];
     
-    // a string with Mush markup
-    MGLineStyled *row2 = MGLineStyled.line;
-    row2.multilineLeft = @"This row has **bold** text, //italics// text, __underlined__ text, "
-    "and some `monospaced` text. The text will span more than one line, and the row will "
-    "automatically adjust its height to fit.|mush";
-    row2.minHeight = 40;
-    [section.topLines addObject:row2];
+    // layout menu line
+    MGLineStyled
+    *layoutLine = [MGLineStyled lineWithLeft:@"Layout Features" right:arrow
+                                        size:ROW_SIZE];
+    [menu.topLines addObject:layoutLine];
     
-    [scroller layoutWithSpeed:0.3 completion:nil];
-    [scroller scrollToView:section withMargin:8];
-    scroller.topMargin = 200;
+    /*// load the features table on tap
+     layoutLine.onTap = ^{
+     [self loadLayoutFeaturesSection:YES];
+     };*/
     
+    // convenience features menu line
+    MGLineStyled
+    *conviniLine = [MGLineStyled lineWithLeft:@"Code Convenience Features"
+                                        right:arrow size:ROW_SIZE];
+    [menu.topLines addObject:conviniLine];
+    
+    /*// load the features table on tap
+     conviniLine.onTap = ^{
+     [self loadConviniFeaturesSection:YES];
+     };*/
 }
 
 
