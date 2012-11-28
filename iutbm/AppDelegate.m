@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "RootViewController.h"
+
 
 @implementation AppDelegate
 
@@ -16,8 +16,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [window addSubview:[navigationController view]];
-    [window makeKeyAndVisible];
+
     return YES;
 }
 							
