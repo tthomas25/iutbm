@@ -263,6 +263,8 @@
 		B89C68B016679BBF00250DF8 /* welcome.png in Resources */ = {isa = PBXBuildFile; fileRef = B89C68AE16679BBF00250DF8 /* welcome.png */; };
 		B89C68B316679BE200250DF8 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = B89C68B216679BE200250DF8 /* Default.png */; };
 		B89C68B516679BF000250DF8 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B89C68B416679BF000250DF8 /* icon.png */; };
+		B89C68B71667A2FE00250DF8 /* planet.png in Resources */ = {isa = PBXBuildFile; fileRef = B89C68B61667A2FE00250DF8 /* planet.png */; };
+		B89C68B91667A48B00250DF8 /* wrench.png in Resources */ = {isa = PBXBuildFile; fileRef = B89C68B81667A48B00250DF8 /* wrench.png */; };
 		B8A0891C164A5C4B00FF1D5D /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8A0891B164A5C4B00FF1D5D /* iPhone.storyboard */; };
 		B8A08A29165FC98300FF1D5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8A08A28165FC98300FF1D5D /* QuartzCore.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		B8A08A2B165FC99500FF1D5D /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8A08A2A165FC99500FF1D5D /* CoreText.framework */; };
@@ -568,6 +570,8 @@
 		B89C68AE16679BBF00250DF8 /* welcome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = welcome.png; path = iutbm/Images/welcome.png; sourceTree = "<group>"; };
 		B89C68B216679BE200250DF8 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		B89C68B416679BF000250DF8 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		B89C68B61667A2FE00250DF8 /* planet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = planet.png; path = iutbm/Images/planet.png; sourceTree = "<group>"; };
+		B89C68B81667A48B00250DF8 /* wrench.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wrench.png; path = iutbm/Images/wrench.png; sourceTree = "<group>"; };
 		B8A0891B164A5C4B00FF1D5D /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = iPhone.storyboard; path = ../iPhone.storyboard; sourceTree = "<group>"; };
 		B8A08A28165FC98300FF1D5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		B8A08A2A165FC99500FF1D5D /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
@@ -878,11 +882,13 @@
 				B8779B8416651D5B003E7335 /* 22-skull-n-bones.png */,
 				B8779B8516651D5B003E7335 /* 23-bird.png */,
 				B8779B8616651D5B003E7335 /* 24-gift.png */,
+				B89C68B81667A48B00250DF8 /* wrench.png */,
 				B8779B8716651D5B003E7335 /* 25-weather.png */,
 				B8779B8816651D5B003E7335 /* 26-bandaid.png */,
 				B8779B8916651D5B003E7335 /* 27-planet.png */,
 				B8779B8A16651D5B003E7335 /* 28-star.png */,
 				B8779B8B16651D5B003E7335 /* 29-heart.png */,
+				B89C68B61667A2FE00250DF8 /* planet.png */,
 				B8779B8C16651D5B003E7335 /* 30-key.png */,
 				B8779B8D16651D5B003E7335 /* 31-ipod.png */,
 				B8779B8E16651D5B003E7335 /* 32-iphone.png */,
@@ -1432,6 +1438,8 @@
 				B89C68B016679BBF00250DF8 /* welcome.png in Resources */,
 				B89C68B316679BE200250DF8 /* Default.png in Resources */,
 				B89C68B516679BF000250DF8 /* icon.png in Resources */,
+				B89C68B71667A2FE00250DF8 /* planet.png in Resources */,
+				B89C68B91667A48B00250DF8 /* wrench.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -20,9 +20,9 @@
 
 - (void)awakeFromNib
 {
-    self.menuItems = [NSArray arrayWithObjects:@"First", @"Second", @"Third",@"Fourth",nil];
-    self.menuItemsLabel = [NSArray arrayWithObjects:@"Accueil",@"Présentation",@"Formations",@"Lycéen", nil];
-    self.menuItemsImage = [NSArray arrayWithObjects:@"house.png",@"presentation.png",@"book.png",@"user.png", nil];
+    self.menuItems = [NSArray arrayWithObjects:@"First", @"Second", @"Third",@"Fourth",@"Fifth",@"Sixth",@"Seventh",nil];
+    self.menuItemsLabel = [NSArray arrayWithObjects:@"Accueil",@"Présentation",@"Formations",@"Lycéen",@"Etudiant",@"International",@"Boite à outils", nil];
+    self.menuItemsImage = [NSArray arrayWithObjects:@"house.png",@"presentation.png",@"book.png",@"user.png",@"gradhat.png",@"planet.png",@"wrench", nil];
 }
 
 - (void)viewDidLoad
