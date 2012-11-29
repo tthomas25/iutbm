@@ -474,6 +474,159 @@
             </objects>
             <point key="canvasLocation" x="-3598" y="3518"/>
         </scene>
+        <!--Seventh Top View Controller - Ressources Info.-->
+        <scene sceneID="8RY-9E-YBU">
+            <objects>
+                <viewController id="eGq-hg-mOY" customClass="SeventhTopViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Chs-WL-UNc">
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="gs0-7c-1W0">
+                                <items>
+                                    <navigationItem title="Ressources Info." id="dZj-JP-0yc">
+                                        <barButtonItem key="leftBarButtonItem" title="Menu" id="7H2-9H-2OH">
+                                            <connections>
+                                                <action selector="revealMenu:" destination="eGq-hg-mOY" id="pxA-cU-gzk"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gs0-7c-1W0" firstAttribute="trailing" secondItem="Chs-WL-UNc" secondAttribute="trailing" type="default" id="Ebk-ur-AeX"/>
+                            <constraint firstItem="gs0-7c-1W0" firstAttribute="leading" secondItem="Chs-WL-UNc" secondAttribute="leading" type="default" id="ShG-Kc-hO7"/>
+                            <constraint firstItem="gs0-7c-1W0" firstAttribute="top" secondItem="Chs-WL-UNc" secondAttribute="top" type="default" id="gdr-T7-rdW"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Ressources Info." id="uTL-WO-bqV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TJe-rv-FMz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5986" y="3401"/>
+        </scene>
+        <!--Seventh Top View Controller - Contacts-->
+        <scene sceneID="x2Q-tO-tqY">
+            <objects>
+                <viewController id="b3x-hI-OFP" customClass="SeventhTopViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aiM-2z-TDM">
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="lEb-a9-fir">
+                                <items>
+                                    <navigationItem title="Contacts" id="hP0-2Z-AVl">
+                                        <barButtonItem key="leftBarButtonItem" title="Menu" id="gWD-lD-KkO">
+                                            <connections>
+                                                <action selector="revealMenu:" destination="b3x-hI-OFP" id="b6P-S0-ECX"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lEb-a9-fir" firstAttribute="top" secondItem="aiM-2z-TDM" secondAttribute="top" type="default" id="KEL-Ks-Gsy"/>
+                            <constraint firstItem="lEb-a9-fir" firstAttribute="trailing" secondItem="aiM-2z-TDM" secondAttribute="trailing" type="default" id="mEt-05-HlO"/>
+                            <constraint firstItem="lEb-a9-fir" firstAttribute="leading" secondItem="aiM-2z-TDM" secondAttribute="leading" type="default" id="tEr-ZU-TAX"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Contacts" id="kqc-eh-aZp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="024-rh-KC8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5986" y="4117"/>
+        </scene>
+        <!--Seventh Top View Controller - Publications-->
+        <scene sceneID="XUX-T8-d25">
+            <objects>
+                <viewController id="91I-wc-0N8" customClass="SeventhTopViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kf2-E6-cy9">
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="hgY-ha-TeY">
+                                <items>
+                                    <navigationItem title="Publications" id="oRo-xV-MWi">
+                                        <barButtonItem key="leftBarButtonItem" title="Menu" id="Wdv-Zy-2KH">
+                                            <connections>
+                                                <action selector="revealMenu:" destination="91I-wc-0N8" id="3WH-mJ-19q"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hgY-ha-TeY" firstAttribute="trailing" secondItem="Kf2-E6-cy9" secondAttribute="trailing" type="default" id="D57-At-2lM"/>
+                            <constraint firstItem="hgY-ha-TeY" firstAttribute="leading" secondItem="Kf2-E6-cy9" secondAttribute="leading" type="default" id="fTI-3U-7Ml"/>
+                            <constraint firstItem="hgY-ha-TeY" firstAttribute="top" secondItem="Kf2-E6-cy9" secondAttribute="top" type="default" id="x7q-JJ-AI5"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Publications" id="cnF-sF-bzA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t0a-xx-ftq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5986" y="2718"/>
+        </scene>
+        <!--Seventh Top View Controller - Plan-->
+        <scene sceneID="swc-Sc-2UG">
+            <objects>
+                <viewController id="6tE-ti-uz5" customClass="SeventhTopViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RHb-wc-5of">
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="eTt-BR-whW">
+                                <items>
+                                    <navigationItem title="Plan" id="KFo-yv-bd7">
+                                        <barButtonItem key="leftBarButtonItem" title="Menu" id="Ndq-BI-3dp">
+                                            <connections>
+                                                <action selector="revealMenu:" destination="6tE-ti-uz5" id="Fgy-ep-Rif"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eTt-BR-whW" firstAttribute="leading" secondItem="RHb-wc-5of" secondAttribute="leading" type="default" id="GSw-AN-4Ql"/>
+                            <constraint firstItem="eTt-BR-whW" firstAttribute="top" secondItem="RHb-wc-5of" secondAttribute="top" type="default" id="U5R-w5-4pM"/>
+                            <constraint firstItem="eTt-BR-whW" firstAttribute="trailing" secondItem="RHb-wc-5of" secondAttribute="trailing" type="default" id="w6j-hF-7l3"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Plan" id="BTp-k0-O1L"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z0w-Uo-kcn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5986" y="2070"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="JRs-Dh-Ja7">
+            <objects>
+                <tabBarController storyboardIdentifier="SeventhTop" definesPresentationContext="YES" id="Yaz-av-w1w" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="h6Q-a1-oUK">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="6tE-ti-uz5" kind="relationship" relationship="viewControllers" id="3nm-hc-s7q"/>
+                        <segue destination="91I-wc-0N8" kind="relationship" relationship="viewControllers" id="Jow-Db-RxY"/>
+                        <segue destination="eGq-hg-mOY" kind="relationship" relationship="viewControllers" id="EEr-MT-6QJ"/>
+                        <segue destination="b3x-hI-OFP" kind="relationship" relationship="viewControllers" id="qrV-pD-11S"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VzU-wp-15h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-6514" y="2398"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="dQU-Rl-5eR">
             <objects>
@@ -690,6 +843,244 @@
             </objects>
             <point key="canvasLocation" x="-4186" y="-1670"/>
         </scene>
+        <!--Fifth Top View Controller - Vie étudiante-->
+        <scene sceneID="1fq-wc-cjk">
+            <objects>
+                <viewController id="mlw-Ju-s40" customClass="FifthTopViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LMK-UD-pr5">
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="dZy-UY-Sqo">
+                                <items>
+                                    <navigationItem title="Vie étudiante" id="rJ0-QK-50C">
+                                        <barButtonItem key="leftBarButtonItem" title="Menu" id="huf-GU-BM7">
+                                            <connections>
+                                                <action selector="revealMenu:" destination="mlw-Ju-s40" id="5iz-oE-uEx"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dZy-UY-Sqo" firstAttribute="leading" secondItem="LMK-UD-pr5" secondAttribute="leading" type="default" id="EAr-bq-RHF"/>
+                            <constraint firstItem="dZy-UY-Sqo" firstAttribute="trailing" secondItem="LMK-UD-pr5" secondAttribute="trailing" type="default" id="MgV-oa-n7Q"/>
+                            <constraint firstItem="dZy-UY-Sqo" firstAttribute="top" secondItem="LMK-UD-pr5" secondAttribute="top" type="default" id="TKN-0i-iEc"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Vie étudiante" image="144-martini.png" id="94q-YD-9gX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="moh-5E-5On" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5858" y="-498"/>
+        </scene>
+        <!--Fifth Top View Controller - Offres emplois/stages-->
+        <scene sceneID="FSE-cJ-Pok">
+            <objects>
+                <viewController id="rOw-r5-Arx" customClass="FifthTopViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JYJ-Ee-Nwf">
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="KQk-BU-2P9">
+                                <items>
+                                    <navigationItem title="Offres emplois/stages" id="PKX-fl-8jd">
+                                        <barButtonItem key="leftBarButtonItem" title="Menu" id="Pd5-Uh-Ibc">
+                                            <connections>
+                                                <action selector="revealMenu:" destination="rOw-r5-Arx" id="vgJ-vt-8cc"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KQk-BU-2P9" firstAttribute="top" secondItem="JYJ-Ee-Nwf" secondAttribute="top" type="default" id="5Yu-1C-yb6"/>
+                            <constraint firstItem="KQk-BU-2P9" firstAttribute="trailing" secondItem="JYJ-Ee-Nwf" secondAttribute="trailing" type="default" id="9c2-Lr-mdN"/>
+                            <constraint firstItem="KQk-BU-2P9" firstAttribute="leading" secondItem="JYJ-Ee-Nwf" secondAttribute="leading" type="default" id="qPg-3N-9Np"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Offres emplois/stages" image="33-cabinet.png" id="G94-j2-LBC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pw4-8z-NPa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5419" y="-147"/>
+        </scene>
+        <!--Sixth Top View Controller - Venir-->
+        <scene sceneID="aGT-sq-RMJ">
+            <objects>
+                <viewController id="glr-ip-YSD" customClass="SixthTopViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="A7p-xk-mwG">
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="LP4-0A-s6I">
+                                <items>
+                                    <navigationItem title="Venir" id="P56-cv-Fai">
+                                        <barButtonItem key="leftBarButtonItem" title="Menu" id="zE4-8y-343">
+                                            <connections>
+                                                <action selector="revealMenu:" destination="glr-ip-YSD" id="hff-Qc-qdm"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LP4-0A-s6I" firstAttribute="trailing" secondItem="A7p-xk-mwG" secondAttribute="trailing" type="default" id="Rux-Hd-cdS"/>
+                            <constraint firstItem="LP4-0A-s6I" firstAttribute="leading" secondItem="A7p-xk-mwG" secondAttribute="leading" type="default" id="ofx-GD-D5U"/>
+                            <constraint firstItem="LP4-0A-s6I" firstAttribute="top" secondItem="A7p-xk-mwG" secondAttribute="top" type="default" id="pYT-gB-UuK"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Venir" id="6jv-qx-fno"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nIk-Mb-Ibo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5970" y="1214"/>
+        </scene>
+        <!--Sixth Top View Controller - Témoignages-->
+        <scene sceneID="BgU-Zu-Sth">
+            <objects>
+                <viewController id="M6b-h4-hlC" customClass="SixthTopViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="I55-pT-cQY">
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="ITu-PT-z9X">
+                                <items>
+                                    <navigationItem title="Témoignages" id="RAY-DL-Noi">
+                                        <barButtonItem key="leftBarButtonItem" title="Menu" id="IE9-kS-2ir">
+                                            <connections>
+                                                <action selector="revealMenu:" destination="M6b-h4-hlC" id="YGk-ip-Rtu"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ITu-PT-z9X" firstAttribute="top" secondItem="I55-pT-cQY" secondAttribute="top" type="default" id="44K-8d-iux"/>
+                            <constraint firstItem="ITu-PT-z9X" firstAttribute="leading" secondItem="I55-pT-cQY" secondAttribute="leading" type="default" id="6Je-W1-6k3"/>
+                            <constraint firstItem="ITu-PT-z9X" firstAttribute="trailing" secondItem="I55-pT-cQY" secondAttribute="trailing" type="default" id="lAx-uX-r2D"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Témoignages" id="Mh2-hS-RCY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Vf-ge-kNT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5629" y="1442"/>
+        </scene>
+        <!--Sixth Top View Controller - Partir-->
+        <scene sceneID="KIV-cE-FDy">
+            <objects>
+                <viewController id="jg8-qB-Xcu" customClass="SixthTopViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i9F-pt-OyN">
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="36E-EH-n6G">
+                                <items>
+                                    <navigationItem title="Partir" id="plj-8f-39k">
+                                        <barButtonItem key="leftBarButtonItem" title="Menu" id="awx-vc-GJi">
+                                            <connections>
+                                                <action selector="revealMenu:" destination="jg8-qB-Xcu" id="4Lb-8b-Rsg"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="36E-EH-n6G" firstAttribute="top" secondItem="i9F-pt-OyN" secondAttribute="top" type="default" id="B5h-ZE-NvG"/>
+                            <constraint firstItem="36E-EH-n6G" firstAttribute="trailing" secondItem="i9F-pt-OyN" secondAttribute="trailing" type="default" id="KoL-X8-4ak"/>
+                            <constraint firstItem="36E-EH-n6G" firstAttribute="leading" secondItem="i9F-pt-OyN" secondAttribute="leading" type="default" id="hKJ-jg-q3M"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Partir" id="6aE-9g-SNj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bfc-6D-cZO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5970" y="566"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="FBr-Rs-l0O">
+            <objects>
+                <tabBarController storyboardIdentifier="SixthTop" definesPresentationContext="YES" id="h3P-Uk-hTc" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="U3x-B8-hDi">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="jg8-qB-Xcu" kind="relationship" relationship="viewControllers" id="6z8-y4-TF0"/>
+                        <segue destination="glr-ip-YSD" kind="relationship" relationship="viewControllers" id="3g6-sT-Fw8"/>
+                        <segue destination="M6b-h4-hlC" kind="relationship" relationship="viewControllers" id="geb-5K-RyO"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OPU-ji-3Z8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-6498" y="894"/>
+        </scene>
+        <!--Fifth Top View Controller - Scolarité-->
+        <scene sceneID="Kqr-B6-6KF">
+            <objects>
+                <viewController id="AEK-4X-Dkq" customClass="FifthTopViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="n0p-Ze-m0M">
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="mK5-tH-olO">
+                                <items>
+                                    <navigationItem title="Scolarité" id="yVw-Pk-lmm">
+                                        <barButtonItem key="leftBarButtonItem" title="Menu" id="tn9-hL-INw">
+                                            <connections>
+                                                <action selector="revealMenu:" destination="AEK-4X-Dkq" id="qga-Ck-IzY"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mK5-tH-olO" firstAttribute="trailing" secondItem="n0p-Ze-m0M" secondAttribute="trailing" type="default" id="Bj1-UF-8Pz"/>
+                            <constraint firstItem="mK5-tH-olO" firstAttribute="leading" secondItem="n0p-Ze-m0M" secondAttribute="leading" type="default" id="Kpd-5u-8Ca"/>
+                            <constraint firstItem="mK5-tH-olO" firstAttribute="top" secondItem="n0p-Ze-m0M" secondAttribute="top" type="default" id="VsO-ab-ohG"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Scolarité" image="44-shoebox.png" id="xPj-fN-fLc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TTr-eS-U0h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5858" y="-1146"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="2sy-Pb-QBA">
+            <objects>
+                <tabBarController storyboardIdentifier="FifthTop" definesPresentationContext="YES" id="7Bg-Lp-Jah" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Av1-pA-Lyt">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="AEK-4X-Dkq" kind="relationship" relationship="viewControllers" id="ubd-aV-s39"/>
+                        <segue destination="mlw-Ju-s40" kind="relationship" relationship="viewControllers" id="G3G-EA-Ii2"/>
+                        <segue destination="rOw-r5-Arx" kind="relationship" relationship="viewControllers" id="V0l-lu-Dhv"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Auv-CE-GrK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-6386" y="-818"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="5rF-j3-o60">
             <objects>
@@ -735,14 +1126,89 @@
         <image name="12-eye.png" width="24" height="16"/>
         <image name="121-landscape.png" width="24" height="18"/>
         <image name="13-target.png" width="28" height="28"/>
+        <image name="144-martini.png" width="22" height="24"/>
         <image name="166-newspaper.png" width="28" height="23"/>
         <image name="18-envelope.png" width="24" height="16"/>
         <image name="180-stickynote.png" width="22" height="22"/>
         <image name="193-location-arrow.png" width="24" height="24"/>
+        <image name="33-cabinet.png" width="20" height="26"/>
+        <image name="44-shoebox.png" width="24" height="22"/>
         <image name="53-house.png" width="22" height="22"/>
         <image name="96-book.png" width="18" height="26"/>
         <image name="house.png" width="22" height="22"/>
     </resources>
+    <classes>
+        <class className="ECSlidingViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ECSlidingViewController.h"/>
+        </class>
+        <class className="FifthTopViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FifthTopViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="revealMenu:"/>
+            </relationships>
+        </class>
+        <class className="FirstTopViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FirstTopViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="revealMenu:"/>
+                <relationship kind="outlet" name="anImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="label" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelLetter" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="scroller" candidateClass="MGScrollView"/>
+            </relationships>
+        </class>
+        <class className="FourthTopViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FourthTopViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="revealMenu:"/>
+            </relationships>
+        </class>
+        <class className="GalerieViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GalerieViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="revealMenu:"/>
+                <relationship kind="action" name="segmentSwitch:"/>
+                <relationship kind="outlet" name="scroller" candidateClass="MGScrollView"/>
+                <relationship kind="outlet" name="sender" candidateClass="UISegmentedControl"/>
+            </relationships>
+        </class>
+        <class className="InitialSlidingViewController" superclassName="ECSlidingViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/InitialSlidingViewController.h"/>
+        </class>
+        <class className="MGScrollView" superclassName="UIScrollView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MGScrollView.h"/>
+        </class>
+        <class className="MenuViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MenuViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="SecondTopViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SecondTopViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="revealMenu:"/>
+            </relationships>
+        </class>
+        <class className="SeventhTopViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SeventhTopViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="revealMenu:"/>
+            </relationships>
+        </class>
+        <class className="SixthTopViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SixthTopViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="revealMenu:"/>
+            </relationships>
+        </class>
+        <class className="ThirdTopViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ThirdTopViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="revealMenu:"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
